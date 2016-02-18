@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @artist.name %>
+</h1>
+
+<h3>Genre</h3>
+<p>
+  <%= @artist.genre.try(:name) %>
 </p>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @artist.genre %>
-</p>
+<h3>
+Songs by <%= @artist.name %>
+</h3>
+
+<ul>
+  <% @artist.songs.each do |song| %>
+  <li><%= link_to song.title, song %></li>
+
+  <% end %>
+  <li><%= link_to 'Add New Song', new_song_path %></li>
+</ul>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

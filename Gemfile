@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'font-awesome-rails'
 gem 'thin'
 gem 'stamp'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -51,5 +52,6 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'annotate'
 end
 
