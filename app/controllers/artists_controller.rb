@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: artists
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  genre_id   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_artists_on_genre_id  (genre_id)
+#
+
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
