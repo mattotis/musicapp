@@ -2,7 +2,7 @@ class Song < ActiveRecord::Base
   belongs_to :artist
   has_many :songs
 
-  validates :name, :artist_id, :artist, presence: true
+  validates :name, :artist_id, :artist, presence: true, uniqueness: true
 end
 
 # == Schema Information
